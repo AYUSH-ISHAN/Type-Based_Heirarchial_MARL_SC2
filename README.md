@@ -1,6 +1,9 @@
 # HEirarchial_RL_implementation
 # Apply it to starcraft env
 
+
+# take help from here, to know how to implement.  https://github.com/oxwhirl/pymarl
+
 Make this project priority for now. 
 
 Connect this to MultiAgent and then do the task
