@@ -1,4 +1,4 @@
-# HEirarchial_RL_implementation
+# Heirarchial_RL_implementation
 # Apply it to starcraft env
 
 
