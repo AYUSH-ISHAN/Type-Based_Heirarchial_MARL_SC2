@@ -3,6 +3,13 @@
 # take help from here, to know how to implement.  https://github.com/oxwhirl/pymarl
 # Not much work required just do some changes in the algorithm used in PyMARL. 
 # Comapare the papers with your paper of interest. 
+# Similarities :
+<ul>
+  <li>Qmix architecture has lots of similarity.</li>
+  <li></li>
+
+</ul>
+
 
 Make this project priority for now. 
 
