@@ -1,5 +1,5 @@
 # Heirarchial_RL_implementation
-# To run it do the SAME thing as did to run CARLA from colab
+# **To run it do the SAME thing as did to run CARLA from colab**
 # take help from here, to know how to implement.  https://github.com/oxwhirl/pymarl
 # Not much work required just do some changes in the algorithm used in PyMARL. 
 # Comapare the papers with your paper of interest. 
