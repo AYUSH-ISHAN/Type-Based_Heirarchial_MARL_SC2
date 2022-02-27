@@ -69,7 +69,7 @@ class THGCAgent(nn.Module):
         if activation:
             x = F.relu(fcn(inputs))
         else:
-            x = F.relu(fcn(inputs))
+            x = fcn(inputs))#F.relu(fcn(inputs))
         
         return x
     
