@@ -41,7 +41,7 @@ class THGCAgent(nn.Module):
         self.hidden_dim_2 = None    #   Adust the dim here
         self.fc1 = nn.Linear(input_shape, args.rnn_hidden_dim)
         #self.rnn = nn.GRUCell(args.rnn_hidden_dim, args.rnn_hidden_dim)  # here GAT + LSTM networks will go
-        self.gat = GAT(args.rnn_hidden_dim, gat_config["num_heads_per_layer"], gat_config["num_features_per_layer"])
+        self.gat = GAT(args.rnn_hidden_dim*5, gat_config["num_heads_per_layer"], gat_config["num_features_per_layer"])
         self.lstm = nn.LSTMCell(args.rnn_hidden_dim, args.rnn_hidden_dim)
         ##  Now concat there result and then feed to fc2..  In the forward function.
         
