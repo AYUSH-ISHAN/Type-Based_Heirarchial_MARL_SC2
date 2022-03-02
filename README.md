@@ -25,7 +25,7 @@ PyMARL is [WhiRL](http://whirl.cs.ox.ac.uk)'s framework for deep multi-agent rei
 - [**QTRAN**: QTRAN: Learning to Factorize with Transformation for Cooperative Multi-Agent Reinforcement Learning](https://arxiv.org/abs/1905.05408)
 - [**THGC**: THGC: Multi-agent deep reinforcement learning with type-based hierarchical group communication](https://www.researchgate.net/publication/348552575_Multi-agent_deep_reinforcement_learning_with_type-based_hierarchical_group_communication)
 
-PyMARL is written in PyTorch and uses [SMAC](https://github.com/AYUSH-ISHAN/Heirarchial_MARL/tree/main/smac) {this smac env is customised by me for this model} as its environment.
+PyMARL is written in PyTorch and uses [SMAC](https://github.com/AYUSH-ISHAN/Heirarchial_MARL/tree/main/smac) {this smac env is customised by me for this model, go to the link to the customized smac} as its environment.
 
 ## THGC Algorithm
 
