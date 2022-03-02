@@ -97,6 +97,8 @@ class StarCraft2Env(MultiAgentEnv):
         heuristic_rest=False,
         debug=False,
         comm_dist=0.5,
+        health_diff=0.3
+        
     ):
         """
         Create a StarCraftC2Env environment.
@@ -1135,6 +1137,62 @@ class StarCraft2Env(MultiAgentEnv):
 
     def get_adj_matrix(self):
         return self._adj_matrix
+    
+    def get_ally_health_grouping(self):
+        '''For grouping by health, return ally's health'''
+        
+        group_ally = []
+        agent_ids = [agent_id for agent_id in range(self.n_agent)]
+        for agent_id in agent_ids:
+            unit = self.get_unit_by_id(agent_id)
+            health_agent = unit.health
+            agent_wise = []
+            if unit.health > 0:  # otherwise dead, return all zeros
+                agent_wise.append(agent_id)
+                al_ids = [
+                        al_id for al_id in range(self.n_agents) if al_id != agent_id
+                    ]
+                for i, al_id in enumerate(al_ids):    
+                    al_unit = self.get_unit_by_id(al_id)
+                    health = al_unit.health / al_unit.health_max
+                    if health - health_agent > self.health_diff:
+                        group_ally[agent_id].append(al_id)
+                        agent_ids.remove(al_id)
+                        agent_wise(al_id)
+            else:
+                agent_ids.remove(agent_id)
+            group_ally.append(agent_wise)
+
+        return group_ally
+        
+    def get_ally_loc_grouping(self):
+        '''For grouping by location, returns ally's location'''
+        group_ally = []
+        agent_ids = [agent_id for agent_id in range(self.n_agent)]
+        for agent_id in agent_ids:
+            unit = self.get_unit_by_id(agent_id)
+            agent_wise = []
+            if unit.health > 0:  # otherwise dead, return all zeros
+                agent_wise.append(agent_id)
+                x = unit.pos.x
+                y = unit.pos.y
+                sight_range = self.unit_sight_range(agent_id)
+                al_ids = [
+                    al_id for al_id in range(self.n_agents) if al_id != agent_id
+                ]
+                for i, al_id in enumerate(al_ids):    
+                    al_unit = self.get_unit_by_id(al_id)
+                    al_x = al_unit.pos.x
+                    al_y = al_unit.pos.y
+                    dist = self.distance(x, y, al_x, al_y)
+                    if dist < self.comm_dist and al_unit.health > 0:
+                        group_ally[agent_id].append(al_id)
+                        agent_ids.remove(al_id)
+                        agent_wise(al_id)
+            else:
+                agent_ids.remove(agent_id)
+            group_ally.append(agent_wise)
+        return group_ally
 
     def get_state(self):
         """Returns the global state.
