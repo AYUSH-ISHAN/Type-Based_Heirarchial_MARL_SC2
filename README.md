@@ -25,7 +25,7 @@ PyMARL is [WhiRL](http://whirl.cs.ox.ac.uk)'s framework for deep multi-agent rei
 - [**QTRAN**: QTRAN: Learning to Factorize with Transformation for Cooperative Multi-Agent Reinforcement Learning](https://arxiv.org/abs/1905.05408)
 - [**THGC**: THGC: Multi-agent deep reinforcement learning with type-based hierarchical group communication](https://www.researchgate.net/publication/348552575_Multi-agent_deep_reinforcement_learning_with_type-based_hierarchical_group_communication)
 
-PyMARL is written in PyTorch and uses [SMAC](https://github.com/oxwhirl/smac) as its environment.
+PyMARL is written in PyTorch and uses [SMAC](https://github.com/AYUSH-ISHAN/Heirarchial_MARL/tree/main/smac) {this smac env is customised by me for this model} as its environment.
 
 ## THGC Algorithm
 
@@ -51,6 +51,8 @@ Here, we have a <a href="https://github.com/AYUSH-ISHAN/Heirarchial_MARL/blob/ma
 
 For, commication we have used Graph Attention Networks (<a href="https://arxiv.org/abs/1710.10903">GAT</a>). The GAT netwroks are for communication between the agents of a group (intra level) and for inter group communication.
  
+- [**GAT**: GAT: Graph Attention Networks](https://arxiv.org/abs/1710.10903)
+
 <h4>Adjacency Matrix:</h4>
 
 The adjacency matrix is basically a boolen matrix which tells whether the ally is near a range of communication or not (specifically 0.5). The threshold of including the nodes in the Graph attention vertex is 0.5. The main reason for this was, if agent were far enough, then we don't need communication with them as it will lead to noise or unnecessary data collection, which is not so beneficial and will affect the performance of agents in a group. 
