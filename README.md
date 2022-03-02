@@ -5,12 +5,14 @@
 <img src="./media/sc2.jpg" align="center" width = "800" height = "600"/>
 Here, I have implemented THGC(Type Based Heirarchial for Group Communication netwroks) in StarCraft II environment. I have used this environment along with <a src= "https://github.com/oxwhirl/pymarl">PyMARL</a>. More detail about this is given below.
 <br>
+<br>
 
 ```diff
 - Please pay attention to the version of SC2 you are using for your experiments. 
 - Performance is *not* always comparable between versions. 
 - The results in SMAC (https://arxiv.org/abs/1902.04043) use SC2.4.6.2.69232 not SC2.4.10.
 ```
+<br>
 # **To run it do the SAME thing as did to run CARLA from colab**
 
 # Python MARL framework
