@@ -24,7 +24,9 @@ PyMARL is written in PyTorch and uses [SMAC](https://github.com/oxwhirl/smac) as
 
 <h3>Model Architectures :</h3>
 
+<h3>Agent Grouping :</h3>
 
+<h3>Communication or Knoweldege share via Graph Attention Netowrks:</h3>
 
 ## Installation instructions
 
