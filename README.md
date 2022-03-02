@@ -42,7 +42,7 @@ PyMARL is written in PyTorch and uses [SMAC](https://github.com/oxwhirl/smac) as
 
 ## THGC Algorithm
 
-<h1>Model Architectures :</h1>
+<h3>Model Architectures :</h3>
 
 
 
