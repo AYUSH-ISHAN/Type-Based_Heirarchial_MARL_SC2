@@ -48,7 +48,7 @@ Here, we have grouped the allies by two methods as shown in figures. One is grou
 <h3>Communication or Knoweldege share via Graph Attention Netowrks:</h3>
 
 For, commication we have used Graph Attention Networks (<a href="https://arxiv.org/abs/1710.10903">GAT</a>). The GAT netwroks are for communication between the agents of a group (intra level) and for inter group communication.
-
+ 
 <h4>Adjacency Matrix:</h4>
 
 The adjacency matrix is basically a boolen matrix which tells whether the ally is near a range of communication or not (specifically 0.5). The threshold of including the nodes in the Graph attention vertex is 0.5. The main reason for this was, if agent were far enough, then we don't need communication with them as it will lead to noise or unnecessary data collection, which is not so beneficial and will affect the performance of agents in a group. 
