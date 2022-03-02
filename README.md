@@ -53,6 +53,9 @@ For, commication we have used Graph Attention Networks (<a href="https://arxiv.o
  
 - [**GAT**: GAT: Graph Attention Networks](https://arxiv.org/abs/1710.10903)
 
+<img src = "./media/GAT.png" align = "center"/>
+<br>
+
 <h4>Adjacency Matrix:</h4>
 
 The adjacency matrix is basically a boolen matrix which tells whether the ally is near a range of communication or not (specifically 0.5). The threshold of including the nodes in the Graph attention vertex is 0.5. The main reason for this was, if agent were far enough, then we don't need communication with them as it will lead to noise or unnecessary data collection, which is not so beneficial and will affect the performance of agents in a group. 
