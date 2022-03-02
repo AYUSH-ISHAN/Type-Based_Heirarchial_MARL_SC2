@@ -49,24 +49,7 @@ class THGCLearner:
         avail_actions = batch["avail_actions"]
 
         # Calculate estimated Q-Values
-
-        ''''
-            MAIN GAME STARTS FROM HERE.  All main parts here only.
-
-            APPROX every thing same as Qmix-- But take care of only feeding the network.
-            Line GAT one. While loss, target network, all same.
-
-
-            go to "forward" function of basic_controller.
-
-        '''
-        # run practice.py to see the dimension of this.
-        # return agent_outs.view(ep_batch.batch_size, self.n_agents, -1)
-
-        '''
-        Changes complete Check it out.
         
-        '''
         mac_out = []
         self.mac.init_hidden(batch.batch_size)
         for t in range(batch.max_seq_length):
