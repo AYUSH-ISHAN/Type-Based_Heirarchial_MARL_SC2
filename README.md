@@ -6,8 +6,6 @@
 # Heirarchial_RL_implementation
 # **To run it do the SAME thing as did to run CARLA from colab**
 
-<img src = "./media/THGC.png"/>
-
 # Python MARL framework
 
 PyMARL is [WhiRL](http://whirl.cs.ox.ac.uk)'s framework for deep multi-agent reinforcement learning and includes implementations of the following algorithms:
@@ -23,6 +21,10 @@ PyMARL is written in PyTorch and uses [SMAC](https://github.com/oxwhirl/smac) as
 ## THGC Algorithm
 
 <h3>Model Architectures :</h3>
+
+<img src = "./media/THGC.png"/>
+
+<p align="center">In the above shown figure we have the THGC network architecture.</p>
 
 <h3>Agent Grouping :</h3>
 
