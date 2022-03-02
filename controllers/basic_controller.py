@@ -34,7 +34,6 @@ class BasicMAC:
     # look at 't' above
     def forward(self, ep_batch, t, test_mode=False):
         batch_input = self._build_inputs(ep_batch, t)
-        # agent_inputs = self._build_msg(comm_input, ep_batch.batch_size, ep_batch["adj_matrix"][:, t, ...], ep_batch.device)
         agents_groups = self._build_grps_wise_inp(batch_input, ep_batch[self.grouping_method][:, t, ...], ep_batch.device)
         adj_mat = ep_batch["adj_matrix"][:, t, ...]
         avail_actions = ep_batch["avail_actions"][:, t]
@@ -91,26 +90,22 @@ class BasicMAC:
         self.hidden_states = self.agent.init_hidden().unsqueeze(0).expand(batch_size, self.n_agents, -1)  # bav
 
     def parameters(self):
-        return list(self.agent.parameters())+self.gat_params()#list(self.gnn.parameters())
-
+        return list(self.agent.parameters())+self.gat_params()
     def load_state(self, other_mac):
         self.agent.load_state_dict(other_mac.agent.state_dict())
         self.load_gat_state(other_mac)
-        # self.gnn.load_state_dict(other_mac.gnn.state_dict())
+        
 
     def cuda(self):
         self.agent.cuda()
         self.gat_cuda()
-        # self.gnn.cuda_transfer()
-
+        
     def save_models(self, path):
         th.save(self.agent.state_dict(), "{}/agent.th".format(path))
         self.save_gat(path)
-        # th.save(self.gnn.state_dict(), "{}/gnn.th".format(path))
 
     def load_models(self, path):
         self.agent.load_state_dict(th.load("{}/agent.th".format(path), map_location=lambda storage, loc: storage))
-        # self.gnn.load_state_dict(th.load("{}/gnn.th".format(path), map_location=lambda storage, loc: storage))
         self.gat_load(path)
 
     def _build_agents(self, input_shape):  
