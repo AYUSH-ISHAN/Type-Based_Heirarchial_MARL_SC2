@@ -1155,7 +1155,7 @@ class StarCraft2Env(MultiAgentEnv):
                 for i, al_id in enumerate(al_ids):    
                     al_unit = self.get_unit_by_id(al_id)
                     health = al_unit.health / al_unit.health_max
-                    if health - health_agent > self.health_diff:
+                    if abs(health - health_agent) > self.health_diff:
                         group_ally[agent_id].append(al_id)
                         agent_ids.remove(al_id)
                         agent_wise(al_id)
