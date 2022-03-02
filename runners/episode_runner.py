@@ -58,7 +58,9 @@ class EpisodeRunner:
                 "state": [self.env.get_state()],
                 "avail_actions": [self.env.get_avail_actions()],
                 "obs": [self.env.get_obs()],
-                "adj_matrix": [self.env.get_adj_matrix()]
+                "adj_matrix": [self.env.get_adj_matrix()],
+                "group_by_health":[self.get_ally_health_grouping()],
+                "group_by_location":[self.get_ally_loc_grouping]
             }
 
             self.batch.update(pre_transition_data, ts=self.t)
