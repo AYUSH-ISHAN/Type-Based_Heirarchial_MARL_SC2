@@ -6,7 +6,7 @@
 # Heirarchial_RL_implementation
 # **To run it do the SAME thing as did to run CARLA from colab**
 
-<img src = "./THGC.png"/>
+<img src = "./media/THGC.png"/>
 
 # Python MARL framework
 
@@ -25,6 +25,17 @@ PyMARL is written in PyTorch and uses [SMAC](https://github.com/oxwhirl/smac) as
 <h3>Model Architectures :</h3>
 
 <h3>Agent Grouping :</h3>
+
+Here, we have grouped the allies by two methods as shown in figure<br>
+
+<p>
+    <img src="./media/location.png" alt align="left">
+    <em>Grouping by location</em>
+    <img src="./media/health.png" alt align = "right">
+    <em>Grouping by health</em>
+  
+</p>
+
 
 <h3>Communication or Knoweldege share via Graph Attention Netowrks:</h3>
 
