@@ -1,9 +1,9 @@
 # Multi-agent deep reinforcement learning with type-based hierarchical group communication
 
 # Preface 
-
+Here, I have implemented THGC(Type Based Heirarchial for Group Communication netwroks) in StarCraft II environment. I have used this environment along with <a src= "https://github.com/oxwhirl/pymarl">PyMARL</a>. More detail about this is given below.<br><br>
 <img src="./media/sc2.jpg" align="center" width = "800" height = "600"/>
-Here, I have implemented THGC(Type Based Heirarchial for Group Communication netwroks) in StarCraft II environment. I have used this environment along with <a src= "https://github.com/oxwhirl/pymarl">PyMARL</a>. More detail about this is given below.
+
 <br>
 <br>
 
