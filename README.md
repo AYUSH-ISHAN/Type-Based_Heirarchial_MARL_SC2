@@ -36,8 +36,15 @@ PyMARL is [WhiRL](http://whirl.cs.ox.ac.uk)'s framework for deep multi-agent rei
 - [**VDN**: Value-Decomposition Networks For Cooperative Multi-Agent Learning](https://arxiv.org/abs/1706.05296) 
 - [**IQL**: Independent Q-Learning](https://arxiv.org/abs/1511.08779)
 - [**QTRAN**: QTRAN: Learning to Factorize with Transformation for Cooperative Multi-Agent Reinforcement Learning](https://arxiv.org/abs/1905.05408)
+- [**THGC**: THGC: Multi-agent deep reinforcement learning with type-based hierarchical group communication](https://www.researchgate.net/publication/348552575_Multi-agent_deep_reinforcement_learning_with_type-based_hierarchical_group_communication)
 
 PyMARL is written in PyTorch and uses [SMAC](https://github.com/oxwhirl/smac) as its environment.
+
+## THGC Algorithm
+
+<h1>Model Architectures :</h1>
+
+
 
 ## Installation instructions
 
