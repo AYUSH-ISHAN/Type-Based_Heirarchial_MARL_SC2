@@ -14,7 +14,6 @@ class THGCAgent(nn.Module):
         super(THGCAgent, self).__init__()
         self.args = args
         self.input_shape = 'look above'#input_shape
-
         
         self.hidden_dim_2 = None    #   Adust the dim here
         self.fc1 = nn.Linear(input_shape, args.mlp_hidden_dim)
@@ -62,7 +61,7 @@ class THGCAgent(nn.Module):
         
         return x
     
-    def forward(self, inputs, hidden_state, intra=False, inter=False, GAT_intra=False, GAT_inter=False, first=False):
+    def forward(self, inputs, hidden_state, adj_mat, intra=False, inter=False, GAT_intra=False, GAT_inter=False, first=False):
 
         n_agents = self.args['n_agents']
 
@@ -74,7 +73,7 @@ class THGCAgent(nn.Module):
                 x2h = self.lstm(inputs)
                 x2 = self.MLP_layer(self, x2h, 2, activation=True)
             else:
-                x2h = self.GAT_layer(inputs, hidden_state, layer=1)  # combined x2 input of aself.gents in a particular group
+                x2h = self.GAT_layer(inputs, adj_mat, layer=1)  # combined x2 input of aself.gents in a particular group
                 x2 = self.MLP_layer(self, x2h, 2, activation=True)
 
             return x2, x2h 
@@ -82,12 +81,31 @@ class THGCAgent(nn.Module):
         if inter:
             # in this case inputs will be V
             if GAT_inter:
-                x3g = self.GAT_layer(inputs,hidden_state, layer=2)  # combined x3 input of different groups
+                x3g = self.GAT_layer(inputs, adj_mat, layer=2)  # combined x3 input of different groups
                 Q = self.MLP_layer(self, x3g, 3, activation=True)
             else:
                 Q = self.MLP_layer(self, inputs, 3, activation=True)
         
         return Q, x3g
+
+
+    def load_state(self, other_mac):  
+        self.gat.load_state_dict(other_mac.gat.state_dict())
+    
+    def gat_params(self):
+        return list(self.gat.parameters())
+    
+    def load_gat_state(self, other_mac):
+        self.gat.load_state_dict(other_mac.gat.state_dict())
+
+    def gat_cuda(self):
+        self.gat.cuda_transfer()
+
+    def save_gat(self, path):
+        torch.save(self.gat.state_dict(), "{}/gat.th".format(path))
+
+    def gat_load(self, path):
+        self.gat.load_state_dict(torch.load("{}/gat.th".format(path), map_location=lambda storage, loc: storage))
 
 class GATComm(torch.nn.Module):
     def __init__(self, input_shape, hidden_msg_dim, hid_msg_out,args, training=True):
@@ -110,10 +128,4 @@ class GATComm(torch.nn.Module):
                     x_in = F.dropout(x_in, p=0.2, training=self.training)
             x_out.append(x_in) 
         return torch.stack(x_out, dim=0)
-
-
-
-
-
-
        
