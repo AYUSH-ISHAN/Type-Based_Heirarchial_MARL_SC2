@@ -45,6 +45,8 @@ Here, we have grouped the allies by two methods as shown in figures. One is grou
 
 <img src="./media/location.png"/>      <img src="./media/health.png"/><br>
 
+<h4>Types of Agents</h4>
+Here, we have a default agent (rnn agent) and other it thgc agent, which is specifically designed for this project. 
 <h3>Communication or Knoweldege share via Graph Attention Netowrks:</h3>
 
 For, commication we have used Graph Attention Networks (<a href="https://arxiv.org/abs/1710.10903">GAT</a>). The GAT netwroks are for communication between the agents of a group (intra level) and for inter group communication.
