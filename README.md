@@ -39,8 +39,8 @@ PyMARL is written in PyTorch and uses [SMAC](https://github.com/oxwhirl/smac) as
 
 Here, we have grouped the allies by two methods as shown in figures. One is groupinf on basis of location and another is grouping on basis of health.<br>
 <ol>
-  <li><B>On basis of <a href="https://github.com/AYUSH-ISHAN/Heirarchial_MARL/blob/eaf7a3c60f1247dda0b9be34d7f62502f2c56a41/smac/smac/env/starcraft2/starcraft2.py#L1141">health</a> </B>: In this we basically grouped the allies who were having normalised health differences in between 0 to 0.3. The noramlised health is foud the (agent_health) / (agent_max_health). This type of group helps us in combining the strngth of our army together get more commulative reward.</li>
-  <li><B>On basis of <a href="https://github.com/AYUSH-ISHAN/Heirarchial_MARL/blob/eaf7a3c60f1247dda0b9be34d7f62502f2c56a41/smac/smac/env/starcraft2/starcraft2.py#L1168">location</a> </B>: In this grouping takes place if the agents are in a distance of 0.5 units. This not only improves the communication but also helps in improving quick group actions.</li>
+  <li><B>On basis of <a href="https://github.com/AYUSH-ISHAN/Heirarchial_MARL/blob/eaf7a3c60f1247dda0b9be34d7f62502f2c56a41/smac/smac/env/starcraft2/starcraft2.py#L1141">health</a>(right) </B>: In this we basically grouped the allies who were having normalised health differences in between 0 to 0.3. The noramlised health is foud the (agent_health) / (agent_max_health). This type of group helps us in combining the strngth of our army together get more commulative reward.</li>
+  <li><B>On basis of <a href="https://github.com/AYUSH-ISHAN/Heirarchial_MARL/blob/eaf7a3c60f1247dda0b9be34d7f62502f2c56a41/smac/smac/env/starcraft2/starcraft2.py#L1168">location</a> (left) </B>: In this grouping takes place if the agents are in a distance of 0.5 units. This not only improves the communication but also helps in improving quick group actions.</li>
 </ol>
 
 <img src="./media/location.png"/>      <img src="./media/health.png"/><br>
