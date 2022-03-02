@@ -15,7 +15,7 @@ class BasicMAC:
         self.thgc = THGCAgent(input_shape, self.args)
         self._build_agents(input_shape, self.args)
         self.agent_output_type = args.agent_output_type
-        self.grouping_method = args.grps_method
+        self.grouping_method = args.method1 # for location based grouping or args.method2 for health based grouping
         self.action_selector = action_REGISTRY[args.action_selector](args)
 
         self.hidden_states = None
