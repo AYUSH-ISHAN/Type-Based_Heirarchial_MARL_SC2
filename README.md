@@ -1,9 +1,10 @@
+# Multi-agent deep reinforcement learning with type-based hierarchical group communication
+
 ```diff
 - Please pay attention to the version of SC2 you are using for your experiments. 
 - Performance is *not* always comparable between versions. 
 - The results in SMAC (https://arxiv.org/abs/1902.04043) use SC2.4.6.2.69232 not SC2.4.10.
 ```
-# Heirarchial_RL_implementation
 # **To run it do the SAME thing as did to run CARLA from colab**
 
 # Python MARL framework
