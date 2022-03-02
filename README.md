@@ -28,6 +28,12 @@ PyMARL is written in PyTorch and uses [SMAC](https://github.com/oxwhirl/smac) as
 
 Here, we have grouped the allies by two methods as shown in figure<br>
 
+![](./media/location.png)
+*Grouping by location*
+
+![](./media/health.png)
+*Grouping by health*
+
 <p>
     <img src="./media/location.png" alt align="left"><br>
     <em align="left">Grouping by location</em><br>
