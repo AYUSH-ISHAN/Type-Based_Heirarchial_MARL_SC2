@@ -39,7 +39,7 @@ PyMARL is written in PyTorch and uses [SMAC](https://github.com/oxwhirl/smac) as
 
 Here, we have grouped the allies by two methods as shown in figures. One is groupinf on basis of location and another is grouping on basis of health.<br>
 <ol>
-  <li><B>On basis of health </B>: In this we basically grouped the allies who were having normalised health differences in between 0 to 0.3. The noramlised health is foud the agent_health / agent_max_health. This type of group helps us in combining the strngth of our army together get more commulative reward.</li>
+  <li><B>On basis of health </B>: In this we basically grouped the allies who were having normalised health differences in between 0 to 0.3. The noramlised health is foud the (agent_health) / (agent_max_health). This type of group helps us in combining the strngth of our army together get more commulative reward.</li>
   <li><B>On basis of location </B>: In this grouping takes place if the agents are in a distance of 0.5 units. This not only improves the communication but also helps in improving quick group actions.</li>
 </ol>
 
@@ -51,7 +51,8 @@ For, commication we have used Graph Attention Networks (<a href="https://arxiv.o
 
 <h4>Adjacency Matrix:</h4>
 
-The adjacency matrix is basically a boolen matrix which tells whether the ally is near a range of communication or not (specifically 0.5).
+The adjacency matrix is basically a boolen matrix which tells whether the ally is near a range of communication or not (specifically 0.5). The threshold of including the nodes in the Graph attention vertex is 0.5. The main reason for this was, if agent were far enough, then we don't need communication with them as it will lead to noise or unnecessary data collection, which is not so beneficial and will affect the performance of agents in a group. 
+Specifically for grouing, we have used some heuristics to get the commincation on basis of latest data from the env.
 
 ## Installation instructions
 
