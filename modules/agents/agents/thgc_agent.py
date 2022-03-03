@@ -13,9 +13,9 @@ class THGCAgent(nn.Module):
 
         super(THGCAgent, self).__init__()
         self.args = args
-        self.input_shape = 'look above'#input_shape
+        self.input_shape = input_shape
         
-        self.hidden_dim_2 = None    #   Adust the dim here
+        self.hidden_dim_2 = 64   #   Adust the dim here
         self.fc1 = nn.Linear(input_shape, args.mlp_hidden_dim)
         # self.gat = GAT(args.mlp_hidden_dim*5, gat_config["num_heads_per_layer"], gat_config["num_features_per_layer"])
         self.lstm = nn.LSTMCell(args.mlp_hidden_dim, args.mlp_hidden_dim)
