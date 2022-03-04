@@ -37,7 +37,7 @@ optim_eps: 0.00001 # RMSProp epsilon
 grad_norm_clip: 10 # Reduce magnitude of gradients above this L2 norm
 
 # --- Agent parameters ---
-agent: "thgc" # Default rnn agent
+agent: "thgc" # Default thgc agent or rnn agent
 rnn_hidden_dim: 64 # Size of hidden state for default rnn agent
 mlp_hidden_dim: 64
 obs_agent_id: True # Include the agent's one_hot id in the observation
