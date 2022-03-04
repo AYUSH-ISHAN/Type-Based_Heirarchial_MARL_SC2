@@ -39,14 +39,15 @@ grad_norm_clip: 10 # Reduce magnitude of gradients above this L2 norm
 # --- Agent parameters ---
 agent: "thgc" # Default rnn agent
 rnn_hidden_dim: 64 # Size of hidden state for default rnn agent
+mlp_hidden_dim: 64
 obs_agent_id: True # Include the agent's one_hot id in the observation
 obs_last_action: True # Include the agent's last action (one_hot) in the observation
 
 # --- GAT parameters ---
 gnn: "gat"
 num_layers: 2
-msg_hidden_dim: 64
-msg_out_size: 48
+hid_msg_dim: 64
+msg_out_dim: 48
 agent_dist: True # Edge connection based on distance between agents
 unit_type: True # Edege connection for agents of same type
 ## Add more heuristics
