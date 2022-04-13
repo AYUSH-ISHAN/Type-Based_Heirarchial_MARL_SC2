@@ -62,6 +62,7 @@ The adjacency matrix is basically a boolen matrix which tells whether the ally i
 Specifically for grouing, we have used some heuristics to get the commincation on basis of latest data from the env.
 
 ## Results:
+The results show the performance of THGC algorithm as compared to other algorithms in different modes of battle.
 <table allign = "center">
   <tr>
     <td><img src="./assets/1.png"/></td>
@@ -74,6 +75,8 @@ Specifically for grouing, we have used some heuristics to get the commincation o
     <td><img src="./assets/6.png"/></td>
   </tr>
  </table>
+### COnclusion:
+THGC seens to better than rest of them.
 
 ## Installation instructions
 
