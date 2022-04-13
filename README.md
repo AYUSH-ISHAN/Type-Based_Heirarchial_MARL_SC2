@@ -61,6 +61,20 @@ For, commication we have used Graph Attention Networks (<a href="https://arxiv.o
 The adjacency matrix is basically a boolen matrix which tells whether the ally is near a range of communication or not (specifically 0.5). The threshold of including the nodes in the Graph attention vertex is 0.5. The main reason for this was, if agent were far enough, then we don't need communication with them as it will lead to noise or unnecessary data collection, which is not so beneficial and will affect the performance of agents in a group. 
 Specifically for grouing, we have used some heuristics to get the commincation on basis of latest data from the env.
 
+## Results:
+<table allign = "center">
+  <tr>
+    <td><img src="./assets/1.png"/></td>
+    <td><img src="./assets/2.png"/></td>
+    <td><img src="./assets/3.png"/></td>
+  </tr>
+  <tr>
+    <td><img src="./assets/4.png"/></td>
+    <td><img src="./assets/5.png"/></td>
+    <td><img src="./assets/6.png"/></td>
+  </tr>
+ </table>
+
 ## Installation instructions
 
 Build the Dockerfile using 
