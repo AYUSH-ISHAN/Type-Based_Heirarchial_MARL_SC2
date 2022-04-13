@@ -74,8 +74,10 @@ The results show the performance of THGC algorithm as compared to other algorith
     <td><img src="./assets/5.png"/></td>
     <td><img src="./assets/6.png"/></td>
   </tr>
- </table>
+</table>
+
 ## Conclusion:
+
 THGC seens to better than rest of them.
 
 ## Installation instructions
