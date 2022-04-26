@@ -13,7 +13,6 @@ Here, I have implemented THGC(Type Based Heirarchial for Group Communication net
 - The results in SMAC (https://arxiv.org/abs/1902.04043) use SC2.4.6.2.69232 not SC2.4.10.
 ```
 <br>
-# **To run it do the SAME thing as did to run CARLA from colab**
 
 # Python MARL framework
 
